@@ -200,7 +200,7 @@ void prosta_rown(){
     cin>>A>>B;
     cout<<"wzor: B(x-xo)-A(y-yo)"<<endl;
     if(A>0) cout<<"y= "<<B<<"/"<<A<<"x+ "<<((B*xo*-1)+(A*yo))<<"/"<<A;
-    else cout<<"y= "<<-B<<"/"<<-A<<"x+ "<<((B*xo)+(A*yo))<<"/"<<-A;
+    else cout<<"y= "<<-B<<"/"<<A<<"x+ "<<((B*xo)+(A*yo*-1))<<"/"<<A;
 }
 
 void odleglosc(){
