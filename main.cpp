@@ -5,19 +5,20 @@
 using namespace std;
 
 
+
 #pragma region  kolo_wsk
 
-float kolo_wsk(float tab_tem[3][3]) {
-    float wynik = 0, q;
-    int x, y;
-    cout << "= ";
-    for (int i = 0; i < 3; i++) {
-        x = i + 1; y = i + 2;
-        if (x >= 3) x -= 3;
-        if (y >= 3) y -= 3;
-        q = tab_tem[0][i] * tab_tem[1][x] * tab_tem[2][y];
-        cout << "+" << q << " ";
-        wynik += q;
+float kolo_wsk(float tab_tem[3][3]){
+    float wynik=0, q;
+    int x,y;
+    cout<<"= ";
+    for(int i=0; i<3; i++){
+            x=i+1; y=i+2;
+            if(x>=3) x-=3;
+            if(y>=3) y-=3;
+            q=tab_tem[0][i]*tab_tem[1][x]*tab_tem[2][y];
+            cout<<"+"<<q<<" ";
+            wynik+=q;
     }
     for (int i = 2; i >= 0; i--) {
         x = i - 1; y = i - 2;
@@ -204,9 +205,6 @@ void wektory_menu() {
         }
     } while (odp != 5);
 }
-#pragma endregion  wektory_menu
-
-#pragma region  prosta_pros
 
 void prosta_pros() {
     float xo, yo, A, B;
@@ -218,20 +216,20 @@ void prosta_pros() {
     if (B > 0) cout << "y= " << -A << "/" << B << "x+ " << ((A * xo) + (B * yo)) << "/" << B;
     else cout << "y= " << A << "/" << -B << "x+ " << ((A * xo) + (B * yo)) * -1 << "/" << -B;
 }
-#pragma endregion  prosta_pros
 
-#pragma region prosta_rown
+
+
 void prosta_rown() {
     float xo, yo, A, B;
-    cout << "podaj punkt Po[xo,yo] przez który przechodzi prosta l:" << endl;
-    cin >> xo >> yo;
-    cout << "podaj wektor N[A,B] do którego prosta l  jest rownolegla:" << endl;
-    cin >> A >> B;
-    cout << "wzor: B(x-xo)-A(y-yo)" << endl;
-    if (A > 0) cout << "y= " << B << "/" << A << "x+ " << ((B * xo * -1) + (A * yo)) << "/" << A;
-    else cout << "y= " << -B << "/" << -A << "x+ " << ((B * xo) + (A * yo)) << "/" << -A;
+    cout<<"podaj punkt Po[xo,yo] przez który przechodzi prosta l:"<<endl;
+    cin>>xo>>yo;
+    cout<<"podaj wektor N[A,B] do którego prosta l  jest rownolegla:"<<endl;
+    cin>>A>>B;
+    cout<<"wzor: B(x-xo)-A(y-yo)"<<endl;
+    if(A>0) cout<<"y= "<<B<<"/"<<A<<"x+ "<<((B*xo*-1)+(A*yo))<<"/"<<A;
+    else cout<<"y= "<<-B<<"/"<<A<<"x+ "<<((B*xo)+(A*yo*-1))<<"/"<<A;
 }
-#pragma endregion prosta_rown
+
 
 
 #pragma region odleglosc
